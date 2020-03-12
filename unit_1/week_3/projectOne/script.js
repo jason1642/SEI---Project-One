@@ -21,7 +21,7 @@ const watchList = document.querySelector(".watch-list");
 
 
 // ON WINDOW LOAD 
-button.addEventListener("click", async () => {
+window.addEventListener("load", async () => {
   let shuffle = stocks => {
     let shuffledStocks = stocks;
     let currentIndex = stocks.length;
@@ -70,7 +70,7 @@ const tickerItems = document.querySelectorAll(".ticker-item");
 
 
 //Ticker Stocks - ON LOAD
-button.addEventListener("click", async () => {
+window.addEventListener("load", async () => {
 
   for (let i = 0; i < tickerItems.length; i++) {
     const response = await axios.get(`${DOMAIN}${etfStocks[i]}`)
