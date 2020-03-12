@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliantra</title>
+  <link href="mainpage.css" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+
+    <header>
+      <img onclick="location.reload();" class="header-img"
+        src="https://cdn3.iconfinder.com/data/icons/abstract-tree-wood-forest-ecology-landscape-eco-gr/1470/green_eco_leaves_circle_logo_eco_recycle-512.png">
+      <h1 onclick="location.reload();">Aliantra</h1>
+      <div class="input-header-container">
+        <input id="stock-search-input" type="text" placeholder="Search a stock symbol" value=""
+          onfocus="this.placeholder=''" onblur="this.placeholder='Search a stock symbol'">
+        <button id="search-submit">Submit</button>
+      </div>
+      <a id="home-link" href="main.html">Home</a>
+    </header>
+
+
+    <div class="text-wrapper-container">
+      <div class="ticker-wrap">
+        <div class="ticker-move">
+          <div class="ticker-item tick-stock1"></div>
+          <div class="ticker-item tick-stock2"></div>
+          <div class="ticker-item tick-stock3"></div>
+          <div class="ticker-item tick-stock4"></div>
+          <div class="ticker-item tick-stock5"></div>
+          <div class="ticker-item tick-stock6"></div>
+          <div class="ticker-item tick-stock7"></div>
+          <div class="ticker-item tick-stock8"></div>
+          <div class="ticker-item tick-stock9"></div>
+          <div class="ticker-item tick-stock10"></div>
+          <div class="ticker-item tick-stock11"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="stocks-container">
+
+
+
+
+      <div class="top-stocks">
+        <h2 class="top-stock-h2">Top Stocks</h2>
+        <div class="top-stock-label1"></div>
+        <div class="top-stock-label2">Name</div>
+        <div class="top-stock-label3">Price</div>
+        <div class="top-stock-label4">% Change</div>
+        <div class="top-stock-cell">
+          <div class="top-stock-cell-value top-stock-img"></div>
+          <div class="top-stock-cell-value top-stock-company-name"></div>
+          <div class="top-stock-cell-value top-stock-price"></div>
+          <div class="top-stock-cell-value top-stock-change-percent"></div>
+        </div>
+        <div class="top-stock-cell">
+          <div class="top-stock-cell-value top-stock-img"></div>
+          <div class="top-stock-cell-value top-stock-company-name"></div>
+          <div class="top-stock-cell-value top-stock-price"></div>
+          <div class="top-stock-cell-value top-stock-change-percent"></div>
+        </div>
+        <div class="top-stock-cell">
+          <div class="top-stock-cell-value top-stock-img"></div>
+          <div class="top-stock-cell-value top-stock-company-name"></div>
+          <div class="top-stock-cell-value top-stock-price"></div>
+          <div class="top-stock-cell-value top-stock-change-percent"></div>
+        </div>
+        <div class="top-stock-cell">
+          <div class="top-stock-cell-value top-stock-img"></div>
+          <div class="top-stock-cell-value top-stock-company-name"></div>
+          <div class="top-stock-cell-value top-stock-price"></div>
+          <div class="top-stock-cell-value top-stock-change-percent"></div>
+        </div>
+        <div class="top-stock-cell">
+          <div class="top-stock-cell-value top-stock-img"></div>
+          <div class="top-stock-cell-value top-stock-company-name"></div>
+          <div class="top-stock-cell-value top-stock-price"></div>
+          <div class="top-stock-cell-value top-stock-change-percent"></div>
+        </div>
+      </div>
+      <div class="watch-list">
+        <div class="watchlist-h2">
+          <h2>Watchlist</h2>
+        </div>
+        <div class="empty-watchlist-message">Search for a stock to add it to your watchlist</div>
+        <div class="watch-list-cell watch-list-cell1">
+        </div>
+        <div class="watch-list-cell watch-list-cell2">
+        </div>
+        <div class="watch-list-cell watch-list-cell3">
+        </div>
+        <div class="watch-list-cell watch-list-cell4">
+        </div>
+        <div class="watch-list-cell watch-list-cell5">
+        </div>
+        <div class="watch-list-cell watch-list-cell6">
+        </div>
+        <div class="watch-list-cell watch-list-cell7">
+        </div>
+        <div class="watch-list-cell watch-list-cell8">
+        </div>
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

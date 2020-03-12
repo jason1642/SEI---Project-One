@@ -1,0 +1,336 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 65% 1fr;
+  grid-template-rows: 10% 5% 1fr;
+  gap: 0%;
+}
+
+header {
+  display: grid;
+  height: 100%;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border-radius: 9px;
+  /* background-color: rgb(87, 246, 167); */
+  background-color: rgb(63, 236, 155);
+  grid-template-columns: 10% 20% 1fr 10%;
+}
+
+@keyframes tick {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0)
+  }
+}
+
+body {
+  background-color: rgb(235, 255, 244);
+}
+
+.text-wrapper-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  border-radius: 9px;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  display: block;
+  overflow: hidden;
+  background-color: white;
+}
+
+.ticker-wrap {
+  width: 100%;
+  padding-left: 30%;
+}
+
+.ticker-move {
+  display: inline-block;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: tick;
+  animation-duration: 90s;
+  white-space: nowrap;
+  padding-right: 80%;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 25px;
+}
+
+h1 {
+  position: relative;
+  right: 50px;
+  text-align: left;
+  font-size: 58px;
+}
+
+p {
+  overflow: auto;
+}
+
+.input-header-container {
+  grid-row: 1/3;
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#stock-search-input {
+  height: 50%;
+  width: 50%;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.stocks-container {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  display: grid;
+  height: 80vh;
+  grid-template-rows: 1fr;
+  grid-template-columns: 65% 1fr;
+  margin-top: 0.9%;
+
+}
+
+#search-submit {
+  height: 50%;
+  width: 20%;
+  background-color: white;
+  border-radius: 5%;
+  border: none;
+  font-size: 1.5em;
+
+}
+
+#search-submit:hover {
+  background-color: rgb(217,
+      255,
+      217);
+}
+
+#home-link {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  grid-column: 4/5;
+  text-decoration: none;
+  color: white;
+
+}
+
+.header-img {
+  height: 100%;
+  width: auto;
+  position: relative;
+  left: 20px;
+}
+
+.header-img:hover {
+  cursor: pointer;
+}
+
+.top-stocks {
+  /* background-color: rgb(147, 194, 155); */
+  grid-row: 1/2;
+  grid-column: 1/2;
+  height: 110vh;
+  width: 95%;
+  border-radius: 6%;
+  background-color: white;
+  border: 2px solid rgb(147, 194, 155);
+  margin-left: 1%;
+  display: grid;
+  /* grid-template-columns: 6% 1fr 1fr 1fr; */
+  grid-auto-rows: 1fr;
+  grid-template-rows: 7% 3% repeat(5, 1fr);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-stock-label1 {
+  border-top: 2px solid rgb(147, 194, 155);
+  grid-row: 2/3;
+  grid-column: 1/2;
+  text-align: center;
+}
+
+.top-stock-label2 {
+  grid-row: 2/3;
+  text-align: center;
+  grid-column: 2/3;
+  font-size: 1.4em;
+  border-top: 2px solid rgb(147, 194, 155);
+}
+
+.top-stock-label3 {
+  grid-row: 2/3;
+  font-size: 1.4em;
+  text-align: center;
+  grid-column: 3/4;
+  border-top: 2px solid rgb(147, 194, 155);
+}
+
+.top-stock-label4 {
+  grid-row: 2/3;
+  font-size: 1.4em;
+  grid-column: 4/5;
+  text-align: center;
+  border-top: 2px solid rgb(147, 194, 155);
+}
+
+h2 {
+  text-align: center;
+  font-size: 3em;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+/* Each cell will have company name, current price, and % change */
+.top-stock-cell {
+  display: grid;
+  border-top: 3px rgb(147, 194, 155) solid;
+  grid-column: 1/5;
+  font-size: 2em;
+  grid-template-columns: 19% 1fr 1fr 1fr;
+  border-radius: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-stock-cell>* {
+  text-align: center;
+}
+
+.top-stock-h2 {
+  grid-column: 1/5;
+}
+
+.top-stock-cell-value {}
+
+.top-stock-cell-img {
+  grid-column: 1/2;
+  object-fit: cover;
+}
+
+.top-stock-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.top-stock-cell-img {
+  margin: auto 0;
+}
+
+.watch-list {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  height: 110vh;
+  width: auto;
+  border-radius: 10%;
+  border: 2px solid rgb(147, 194, 155);
+  display: grid;
+  background-color: white;
+  grid-template-rows: 7% repeat(8, 1fr);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.watchlist-h2 {
+  border-bottom: 2px solid rgb(147, 194, 155);
+}
+
+.watch-list-cell {
+  border-top: 3px rgb(147, 194, 155) solid;
+  display: grid;
+  display: none;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  font-size: 1.8em;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.watch-list-cell-plus {
+  border-bottom: 1px solid rgb(147, 194, 155);
+}
+
+.watch-list-cell>* {
+  text-align: center;
+  /* border-right: 1px rgb(147, 194, 155) solid; */
+  margin-top: 40px;
+}
+
+.watch-list-cell:hover {
+  background-color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+
+.top-stock-cell:hover {
+  background-color: rgb(197, 255, 225);
+  cursor: pointer;
+}
+
+.empty-watchlist-message {
+  grid-row: 2/6;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  font-size: 20px;
+  color: rgb(97, 97, 97);
+}
+
+.watchlist-h2 {
+  display: inline-block;
+
+}
+
+.col1 {
+  grid-column: 1/2;
+
+}
+
+.col2 {
+  grid-column: 2/3;
+}
+
+.col3 {
+  grid-column: 3/4;
+  text-align: right;
+}
+
+.watch-list-cell-value {
+
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  width: 32%;
+  font-size: 1.4em;
+  padding-top: 20px;
+}
+
+.watch-list-cell-value:hover {
+  cursor: pointer;
+}
+
+span {
+  display: inline;
+}
+
+.ticker-stock-name {
+  font-weight: 600;
+}

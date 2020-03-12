@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="mainpage.css" rel="stylesheet" type="text/css">
+  <link href="stockinfopage.css" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="page2.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img onclick="location.reload();" class="header-img"
+        src="https://cdn3.iconfinder.com/data/icons/abstract-tree-wood-forest-ecology-landscape-eco-gr/1470/green_eco_leaves_circle_logo_eco_recycle-512.png">
+      <h1 onclick="location.reload();">Aliantra</h1>
+      <div class="input-header-container">
+        <input id="stock-search-input" type="text" placeholder="Search a stock symbol" value=""
+          onfocus="this.placeholder=''" onblur="this.placeholder='Search a stock symbol'">
+        <button id="search-submit">Submit</button>
+      </div>
+      <a id="home-link" href="main.html">Home</a>
+    </header>
+
+
+
+    <main>
+      <div class="top-card">
+        <div class="p2-company-name">Microsoft</div>
+        <div class="img-n-symbol">
+          <img class="page2-img"
+            src="https://cdn3.iconfinder.com/data/icons/abstract-tree-wood-forest-ecology-landscape-eco-gr/1470/green_eco_leaves_circle_logo_eco_recycle-512.png">
+          <div class="page2-symbol">MSFT</div>
+          <div class="page2-price">160.88</div>
+        </div>
+        <div class="page2-percent-change">
+          <h2>% Change Today</h2>
+          <p>-5.52%</p>
+        </div>
+        <div class="page2-price-change">
+          <h2>Price Change Today</h2>
+          <p>- 40</p>
+        </div>
+        <div class="line-graph-img">
+          <img src="green.png">
+        </div>
+
+      </div>
+      <div class="bottom-card"></div>
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

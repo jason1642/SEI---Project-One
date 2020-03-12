@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+.content {
+  margin-top: 50px;
+  width: 100px;
+  height: 100px;
+  border: 2px dotted red;
+}
+
+
+aside {
+  background-color: goldenrod;
+  position: relative;
+  display: inline-block;
+  height: 100vh;
+  width: 20vw;
+}
+
+header {
+  position: relative;
+  height: 10vh;
+  background-color: lightseagreen;
+
+}
+
+nav {
+  display: inline-block;
+  top: 0;
+  right: 10px;
+}
+
+main {
+  position: relative;
+
+  background-color: whitesmoke;
+}
+
+footer {
+  background-color: olive;
+  height: 10vh;
+  width: 100vw;
+}
