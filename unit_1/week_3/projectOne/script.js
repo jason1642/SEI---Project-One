@@ -2,7 +2,7 @@ const DOMAIN = "https://financialmodelingprep.com/api/v3/company/profile/";
 const topCompanies = ["fb", 'nvda', 'tsla', "aapl", "msft", "amzn", 'amd', "f", "ino", 'plug', 'ally', 'vktx', 'gern', 'twtr', 'snap', 'ge', 'gm', 'sbux', "LK", 'baba'];
 const userInput = document.querySelector("#stock-search-input");
 const button = document.querySelector("#search-submit");
-const etfStocks = ['TQQQ', 'SPY', 'SQQQ', 'UPRO', 'AAPL', 'UDOW', 'MSFT', 'SPXL', 'SOXL', 'QLD', 'BAC', 'V']
+const etfStocks = ['TQQQ', 'SPY', 'SQQQ', 'UPRO', 'AAPL', 'UDOW', 'MSFT', 'SPXL', 'SOXL', 'QLD', 'BAC', 'V', 'TQQQ', 'SPY', 'SQQQ', 'UPRO', 'AAPL', 'UDOW', 'MSFT']
 let currentCompanyName = "";
 
 
