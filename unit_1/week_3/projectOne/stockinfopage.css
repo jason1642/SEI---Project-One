@@ -52,8 +52,11 @@ main {
 }
 
 .page2-img {
-  height: 100px;
-  width: auto;
+  position: relative;
+  top:15px;
+  left : 25px;
+  height: 45%;
+  width: 90%;
 }
 
 .page2-symbol {
@@ -64,10 +67,12 @@ main {
 }
 
 .page2-price {
+  display: inline-block;
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 1/2;
   font-size: 2.5em;
-
+  position: relative;
+  top : 40%;
   text-align: center;
 }
 

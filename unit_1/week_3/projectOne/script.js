@@ -4,8 +4,12 @@ const userInput = document.querySelector("#stock-search-input");
 const button = document.querySelector("#search-submit");
 const etfStocks = ['TQQQ', 'SPY', 'SQQQ', 'UPRO', 'AAPL', 'UDOW', 'MSFT', 'SPXL', 'SOXL', 'QLD', 'BAC', 'V', 'TQQQ', 'SPY', 'SQQQ', 'UPRO', 'AAPL', 'UDOW', 'MSFT']
 let currentCompanyName = "";
-
-
+let currentCompanySymbol = "";
+let currentCompanyPrice;
+let currentCompanyPercent;
+let currentCompanyChange;
+let currentCompanyImg;
+let isNegPos;
 
 
 
@@ -113,9 +117,12 @@ button.addEventListener("click", async () => {
 
   if (posiOrNegi.test(response.data.profile.changesPercentage)) {
     percentColor = "#F45532";
+    isNegPos = "red";
   } else {
     percentColor = "green";
+    isNegPos = "green";
   }
+  
   const watchListCell = document.querySelectorAll(".watch-list-cell");
   let createWatchListCell = document.createElement("div");
   createWatchListCell.classList.add("watch-list-cell-plus");
@@ -125,7 +132,7 @@ button.addEventListener("click", async () => {
 <div onclick='pageFunc();' style='color:${percentColor}' class='watch-list-cell-value col3'>${response.data.profile.changesPercentage}</div>
 `;
 
-
+console.log(currentCompanyName)
   watchListTotalCells += 1;
   if (watchListTotalCells < 9) {
     emptyWLMessageDiv.style.display = "none";
@@ -138,7 +145,21 @@ button.addEventListener("click", async () => {
 
     // createWatchListCell.style.display = "grid";
   }
-  console.log(response.data.profile.companyName);
-  currentCompanyName = response.data.profile.companyName;
+  console.log(response.data)
+   currentCompanyName = response.data.profile.companyName;
+  currentCompanySymbol = response.data.symbol;
+  currentCompanyPrice =  response.data.profile.price;
+  currentCompanyPercent = response.data.profile.changesPercentage;
+  currentCompanyChange = response.data.profile.changes;
+  currentCompanyImg = response.data.profile.image;
+ window.localStorage.setItem('companyNamex', `${currentCompanyName}`);
+ window.localStorage.setItem('companySymbolx', `${currentCompanySymbol}`);
+ window.localStorage.setItem('companyPricex', `${currentCompanyPrice}`);
+ window.localStorage.setItem('companyPercentx', `${currentCompanyPercent}`);
+ window.localStorage.setItem('companyChangex', `${currentCompanyChange}`);
+ window.localStorage.setItem('companyImgx', `${currentCompanyImg}`);
+ window.localStorage.setItem('isNegativePositivex', isNegPos)
 })
-window.localStorage.setItem('companyNamex', `${currentCompanyName}`);
+
+console.log(localStorage)
+
