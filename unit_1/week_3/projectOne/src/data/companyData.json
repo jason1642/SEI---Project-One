@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Apple", "price": 110.2, "headquarters": "California" },
+  { "id": 2, "name": "IBM", "price": 9.54, "headquarters": "Maine" },
+  { "id": 3, "name": "Facebook", "price": 220.1, "headquarters": "New York" }
+]
