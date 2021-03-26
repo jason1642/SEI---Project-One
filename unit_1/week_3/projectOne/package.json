@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "cd src && nodemon app.js"
+    "start": "cd src && nodemon server.js"
   },
   "keywords": [],
   "author": "",

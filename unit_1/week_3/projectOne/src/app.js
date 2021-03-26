@@ -16,7 +16,4 @@ app.use(express.json());
 
 app.use('/api/v1/companies', companyRouter);
 
-const port = 3004;
-app.listen(port, () => {
-  console.log(`Running on port ${port}...`);
-});
+module.exports = app;
