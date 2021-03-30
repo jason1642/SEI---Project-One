@@ -1,8 +1,8 @@
 // API Access
-// const DOMAIN = 'https://financialmodelingprep.com/api/v3/company/profile/';
+// const domain = 'https://financialmodelingprep.com/api/v3/company/profile/';
 // const APIKEY = '0dafce6ce2fa49c8f0acd0ac316dfa33';
 const IEX_API_KEY = 'pk_51d6e645bcac4eb18566f2ccca4d7515';
-const DOMAIN = symbol => `https://cloud.iexapis.com/stable/stock/${symbol}/quote?token=${IEX_API_KEY}`;
+const domain = symbol => `https://cloud.iexapis.com/stable/stock/${symbol}/quote?token=${IEX_API_KEY}`;
 
 //
 // Template for main page, randomized 5 stocks
@@ -61,12 +61,9 @@ let isNegPos;
 
 //Table one cell values
 const topStockNames = document.querySelectorAll('.top-stock-company-name');
-const watchListCells = document.querySelectorAll('.watch-list-cell');
 const topStockImg = document.querySelectorAll('.top-stock-img');
 const topStockPrice = document.querySelectorAll('.top-stock-price');
 const topStockPercent = document.querySelectorAll('.top-stock-change-percent');
-let watchListTotalCells = 0;
-const watchList = document.querySelector('.watch-list');
 
 // ON WINDOW LOAD
 window.addEventListener('load', async () => {
@@ -87,7 +84,7 @@ window.addEventListener('load', async () => {
 
   let shuffledStocksArray = shuffle(topCompanies);
   for (let i = 0; i < topStockNames.length; i++) {
-    let response = await axios.get(DOMAIN(shuffledStocksArray[i]));
+    let response = await axios.get(domain(shuffledStocksArray[i]));
     const { companyName, latestPrice, changePercent } = response.data;
     console.log(response);
     let percentColor = '';
@@ -111,7 +108,7 @@ const tickerItems = document.querySelectorAll('.ticker-item');
 //Ticker Stocks - ON LOAD
 window.addEventListener('load', async () => {
   for (let i = 0; i < tickerItems.length; i++) {
-    const response = await axios.get(DOMAIN(etfStocks[i]));
+    const response = await axios.get(domain(etfStocks[i]));
     const { changePercent, latestPrice } = response.data;
     console.log(response);
     tickerItems[i].innerHTML = `<p>
