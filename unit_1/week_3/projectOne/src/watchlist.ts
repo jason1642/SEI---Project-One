@@ -50,11 +50,12 @@ button.addEventListener('click', async () => {
   // If there is already an array for watchlist in the local storage that exists, do not create a new one,
   // assign watchlistArray to the array from the local storage
   !window.localStorage.getItem('watchlistArray')
-    ? (window.localStorage.setItem('watchlistArray', '[]'),
+    ? // double expression
+      (window.localStorage.setItem('watchlistArray', '[]'),
       (watchlistArray = window.localStorage.getItem('watchlistArray')))
     : (watchlistArray = JSON.parse(window.localStorage.getItem('watchlistArray')));
   console.log(watchlistArray);
-  // if the symbol is in the watchlist already, just alert, else, push it in the object
+  // if the symbol is in the watchlist already, just alert, if not, push it in the object
 
   watchlistArray && watchlistArray.find(ele => ele.symbol == symbol)
     ? alert('that symbol is already in your watchlist')
